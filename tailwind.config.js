@@ -9,37 +9,29 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Primary Palette
-        burgundy: {
-          DEFAULT: '#8B2635',
-          dark: '#6B1D2A',
-          light: '#A83245',
+        // Black & Grey Palette
+        black: {
+          DEFAULT: '#000000',
+          dark: '#000000',
+          light: '#1A1A1A',
         },
-        cream: {
-          DEFAULT: '#F5F0E8',
-          dark: '#E8E0D4',
-          light: '#FAF7F2',
+        grey: {
+          DEFAULT: '#6B6B6B',
+          dark: '#4A4A4A',
+          light: '#9A9A9A',
+          lighter: '#E5E5E5',
+          lightest: '#F5F5F5',
         },
-        charcoal: {
-          DEFAULT: '#2D2D2D',
+        white: {
+          DEFAULT: '#FFFFFF',
+          dark: '#F0F0F0',
+          light: '#FAFAFA',
+        },
+        // Accent colors (subtle)
+        accent: {
+          DEFAULT: '#333333',
           dark: '#1A1A1A',
           light: '#4A4A4A',
-        },
-        // Secondary Palette
-        ochre: {
-          DEFAULT: '#D4A84B',
-          dark: '#B8923D',
-          light: '#E5C06B',
-        },
-        sage: {
-          DEFAULT: '#7A8B6E',
-          dark: '#5E6E54',
-          light: '#9AAD8C',
-        },
-        rose: {
-          DEFAULT: '#C9A9A6',
-          dark: '#A88987',
-          light: '#DFC9C7',
         },
       },
       fontFamily: {

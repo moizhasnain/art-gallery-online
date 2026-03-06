@@ -5,24 +5,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 :root {
-  --burgundy: #8B2635;
-  --burgundy-dark: #6B1D2A;
-  --burgundy-light: #A83245;
-  --cream: #F5F0E8;
-  --cream-dark: #E8E0D4;
-  --cream-light: #FAF7F2;
-  --charcoal: #2D2D2D;
-  --charcoal-dark: #1A1A1A;
-  --charcoal-light: #4A4A4A;
-  --ochre: #D4A84B;
-  --ochre-dark: #B8923D;
-  --ochre-light: #E5C06B;
-  --sage: #7A8B6E;
-  --sage-dark: #5E6E54;
-  --sage-light: #9AAD8C;
-  --rose: #C9A9A6;
-  --rose-dark: #A88987;
-  --rose-light: #DFC9C7;
+  /* Black & Grey Color Scheme */
+  --black: #000000;
+  --black-dark: #000000;
+  --black-light: #1A1A1A;
+  
+  --grey: #6B6B6B;
+  --grey-dark: #4A4A4A;
+  --grey-light: #9A9A9A;
+  --grey-lighter: #E5E5E5;
+  --grey-lightest: #F5F5F5;
+  
+  --white: #FFFFFF;
+  --white-dark: #F0F0F0;
+  --white-light: #FAFAFA;
+  
+  --accent: #333333;
 }
 
 * {
@@ -43,8 +41,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background-color: var(--cream);
-  color: var(--charcoal);
+  background-color: var(--white-light);
+  color: var(--black);
 }
 
 /* Custom Scrollbar */
@@ -53,16 +51,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--cream-dark);
+  background: var(--grey-lighter);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--burgundy);
+  background: var(--grey-dark);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--burgundy-dark);
+  background: var(--black);
 }
 
 /* Animation Classes */
@@ -120,27 +118,27 @@ body {
 
 /* Button Styles */
 .btn-primary {
-  @apply bg-burgundy text-cream px-6 py-3 rounded-lg font-medium transition-all duration-300;
+  @apply bg-black text-white px-6 py-3 rounded-lg font-medium transition-all duration-300;
 }
 
 .btn-primary:hover {
-  @apply bg-burgundy-dark shadow-lg;
+  @apply bg-grey-dark shadow-lg;
 }
 
 .btn-secondary {
-  @apply bg-ochre text-charcoal-dark px-6 py-3 rounded-lg font-medium transition-all duration-300;
+  @apply bg-grey text-white px-6 py-3 rounded-lg font-medium transition-all duration-300;
 }
 
 .btn-secondary:hover {
-  @apply bg-ochre-dark shadow-lg;
+  @apply bg-grey-dark shadow-lg;
 }
 
 .btn-outline {
-  @apply border-2 border-burgundy text-burgundy px-6 py-3 rounded-lg font-medium transition-all duration-300;
+  @apply border-2 border-black text-black px-6 py-3 rounded-lg font-medium transition-all duration-300;
 }
 
 .btn-outline:hover {
-  @apply bg-burgundy text-cream;
+  @apply bg-black text-white;
 }
 
 /* Card Styles */
@@ -154,11 +152,11 @@ body {
 
 /* Input Styles */
 .input-field {
-  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-burgundy focus:border-transparent transition-all duration-300;
+  @apply w-full px-4 py-3 border border-grey-lighter rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-300;
 }
 
 .input-field::placeholder {
-  @apply text-gray-400;
+  @apply text-grey-light;
 }
 
 /* Container */
@@ -183,9 +181,9 @@ body {
 
 /* Price Tag */
 .price-tag {
-  @apply text-2xl font-bold text-burgundy;
+  @apply text-2xl font-bold text-black;
 }
 
 .price-original {
-  @apply text-lg text-gray-400 line-through;
+  @apply text-lg text-grey-light line-through;
 }
