@@ -74,7 +74,7 @@ export default function Header() {
               aria-label="Cart"
             >
               <ShoppingCart className="w-5 h-5 text-black" />
-              <span className="absolute -top-1 -right-1 bg-black text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-medium">
+              <span className="absolute -top-1 -right-1 bg-[#800000] text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-medium">
                 0
               </span>
             </Link>
