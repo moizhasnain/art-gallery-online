@@ -8,21 +8,21 @@ export const metadata = {
 
 export default function ReturnPolicyPage() {
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-white-light">
       {/* Hero Section */}
-      <section className="bg-burgundy py-16">
+      <section className="bg-black py-16">
         <div className="container-custom">
           <Link
             href="/"
-            className="inline-flex items-center text-cream/80 hover:text-cream mb-8"
+            className="inline-flex items-center text-white/80 hover:text-white mb-8"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-cream">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white">
             Return Policy
           </h1>
-          <p className="text-cream/80 text-lg mt-4 max-w-2xl">
+          <p className="text-white/80 text-lg mt-4 max-w-2xl">
             Our customer-friendly return policy with store credit coupons
           </p>
         </div>
@@ -35,11 +35,11 @@ export default function ReturnPolicyPage() {
             {/* How Returns Work */}
             <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
               <div className="flex items-center space-x-4 mb-6">
-                <div className="w-12 h-12 bg-burgundy/10 rounded-full flex items-center justify-center">
-                  <RefreshCcw className="w-6 h-6 text-burgundy" />
+                <div className="w-12 h-12 bg-black/10 rounded-full flex items-center justify-center">
+                  <RefreshCcw className="w-6 h-6 text-black" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-serif font-bold text-charcoal">
+                  <h2 className="text-2xl font-serif font-bold text-black">
                     How Our Returns Work
                   </h2>
                 </div>
@@ -47,12 +47,12 @@ export default function ReturnPolicyPage() {
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-ochre rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-charcoal font-bold">1</span>
+                  <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold">1</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-charcoal">Request a Return</h3>
-                    <p className="text-gray-600">
+                    <h3 className="font-semibold text-black">Request a Return</h3>
+                    <p className="text-grey-dark">
                       Contact us within 7 days of receiving your order to request a return.
                       Provide your order number and reason for return.
                     </p>
@@ -60,12 +60,12 @@ export default function ReturnPolicyPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-ochre rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-charcoal font-bold">2</span>
+                  <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold">2</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-charcoal">Ship Back the Item</h3>
-                    <p className="text-gray-600">
+                    <h3 className="font-semibold text-black">Ship Back the Item</h3>
+                    <p className="text-grey-dark">
                       Pack the item securely in its original packaging and ship it back to us.
                       We'll provide the return address.
                     </p>
@@ -73,12 +73,12 @@ export default function ReturnPolicyPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-ochre rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-charcoal font-bold">3</span>
+                  <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold">3</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-charcoal">Receive Your Store Credit Coupon</h3>
-                    <p className="text-gray-600">
+                    <h3 className="font-semibold text-black">Receive Your Store Credit Coupon</h3>
+                    <p className="text-grey-dark">
                       Once we receive and inspect the item, we'll issue a store credit coupon
                       equal to the item's value. This coupon can be used for any future purchase!
                     </p>
@@ -86,12 +86,12 @@ export default function ReturnPolicyPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-ochre rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-charcoal font-bold">4</span>
+                  <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold">4</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-charcoal">Shop Again!</h3>
-                    <p className="text-gray-600">
+                    <h3 className="font-semibold text-black">Shop Again!</h3>
+                    <p className="text-grey-dark">
                       Use your coupon code on your next order. The coupon never expires
                       and can be combined with other offers!
                     </p>
@@ -101,9 +101,9 @@ export default function ReturnPolicyPage() {
             </div>
 
             {/* Store Credit Benefits */}
-            <div className="bg-gradient-to-br from-burgundy to-burgundy-dark rounded-2xl p-8 mb-8 text-cream">
+            <div className="bg-gradient-to-br from-black to-grey-dark rounded-2xl p-8 mb-8 text-white">
               <div className="flex items-center space-x-4 mb-6">
-                <CreditCard className="w-8 h-8 text-ochre" />
+                <CreditCard className="w-8 h-8 text-grey-light" />
                 <h2 className="text-2xl font-serif font-bold">
                   Why Store Credit Coupons?
                 </h2>
@@ -111,37 +111,37 @@ export default function ReturnPolicyPage() {
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-ochre rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-grey-light rounded-full mt-2"></div>
                   <div>
                     <h3 className="font-semibold">Full Value Credit</h3>
-                    <p className="text-cream/70 text-sm">
+                    <p className="text-white/70 text-sm">
                       Get 100% of your purchase value as store credit
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-ochre rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-grey-light rounded-full mt-2"></div>
                   <div>
                     <h3 className="font-semibold">No Expiration</h3>
-                    <p className="text-cream/70 text-sm">
+                    <p className="text-white/70 text-sm">
                       Use your coupon anytime - it never expires
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-ochre rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-grey-light rounded-full mt-2"></div>
                   <div>
                     <h3 className="font-semibold">Stackable Offers</h3>
-                    <p className="text-cream/70 text-sm">
+                    <p className="text-white/70 text-sm">
                       Combine with discounts and other promotions
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-ochre rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-grey-light rounded-full mt-2"></div>
                   <div>
                     <h3 className="font-semibold">Easy to Use</h3>
-                    <p className="text-cream/70 text-sm">
+                    <p className="text-white/70 text-sm">
                       Simply enter the code at checkout
                     </p>
                   </div>
@@ -151,16 +151,16 @@ export default function ReturnPolicyPage() {
 
             {/* Policy Details */}
             <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-              <h2 className="text-2xl font-serif font-bold text-charcoal mb-6">
+              <h2 className="text-2xl font-serif font-bold text-black mb-6">
                 Return Policy Details
               </h2>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <Clock className="w-6 h-6 text-burgundy flex-shrink-0 mt-1" />
+                  <Clock className="w-6 h-6 text-black flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-charcoal">7-Day Return Window</h3>
-                    <p className="text-gray-600">
+                    <h3 className="font-semibold text-black">7-Day Return Window</h3>
+                    <p className="text-grey-dark">
                       You have 7 days from the date of delivery to request a return.
                       After 7 days, unfortunately, we cannot accept returns.
                     </p>
@@ -168,10 +168,10 @@ export default function ReturnPolicyPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <Shield className="w-6 h-6 text-burgundy flex-shrink-0 mt-1" />
+                  <Shield className="w-6 h-6 text-black flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-charcoal">Condition Requirements</h3>
-                    <p className="text-gray-600">
+                    <h3 className="font-semibold text-black">Condition Requirements</h3>
+                    <p className="text-grey-dark">
                       Items must be unused, in original packaging, and in the same condition
                       as when you received them. Custom portrait orders cannot be returned
                       due to their personalized nature.
@@ -180,10 +180,10 @@ export default function ReturnPolicyPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <RefreshCcw className="w-6 h-6 text-burgundy flex-shrink-0 mt-1" />
+                  <RefreshCcw className="w-6 h-6 text-black flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-charcoal">Non-Returnable Items</h3>
-                    <ul className="text-gray-600 list-disc list-inside mt-2 space-y-1">
+                    <h3 className="font-semibold text-black">Non-Returnable Items</h3>
+                    <ul className="text-grey-dark list-disc list-inside mt-2 space-y-1">
                       <li>Custom portrait sketches (personalized)</li>
                       <li>Items damaged by misuse</li>
                       <li>Items not in original condition</li>
@@ -195,16 +195,16 @@ export default function ReturnPolicyPage() {
             </div>
 
             {/* How to Contact */}
-            <div className="bg-cream-light rounded-2xl p-8">
-              <h2 className="text-2xl font-serif font-bold text-charcoal mb-6">
+            <div className="bg-grey-lighter rounded-2xl p-8">
+              <h2 className="text-2xl font-serif font-bold text-black mb-6">
                 How to Initiate a Return
               </h2>
               
               <div className="space-y-4">
-                <p className="text-gray-600">
+                <p className="text-grey-dark">
                   To initiate a return, please contact us with:
                 </p>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="space-y-2 text-grey-dark">
                   <li>• Your order number</li>
                   <li>• Item(s) you wish to return</li>
                   <li>• Reason for return</li>
