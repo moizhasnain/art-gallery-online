@@ -1,5 +1,52 @@
+import React from 'react'
 import Link from 'next/link'
 import { ArrowRight, Star, Paintbrush, Palette, Award, Truck, Shield, RefreshCcw } from 'lucide-react'
+
+// Custom SVG Icons for Categories
+const PaintingsIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+    <circle cx="8.5" cy="8.5" r="1.5"/>
+    <polyline points="21 15 16 10 5 21"/>
+  </svg>
+)
+
+const PortraitsIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+    <circle cx="12" cy="7" r="4"/>
+  </svg>
+)
+
+const CanvasIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <rect x="3" y="3" width="18" height="18" rx="2"/>
+    <path d="M3 9h18"/>
+    <path d="M9 21V9"/>
+  </svg>
+)
+
+const PaintsIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+  </svg>
+)
+
+const BrushesIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/>
+    <line x1="10" y1="5" x2="8" y2="7"/>
+    <line x1="2" y1="12" x2="22" y2="12"/>
+    <line x1="7" y1="19" x2="7" y2="21"/>
+    <line x1="17" y1="19" x2="17" y2="21"/>
+  </svg>
+)
+
+const SuppliesIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+  </svg>
+)
 
 export default function Home() {
   return (
@@ -139,12 +186,12 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {[
-              { name: 'Paintings', icon: Paintbrush, href: '/shop/paintings' },
-              { name: 'Portraits', icon: Palette, href: '/shop/portraits' },
-              { name: 'Canvas', icon: Paintbrush, href: '/shop/canvas' },
-              { name: 'Paints', icon: Palette, href: '/shop/paints' },
-              { name: 'Brushes', icon: Paintbrush, href: '/shop/brushes' },
-              { name: 'Supplies', icon: Palette, href: '/shop/supplies' },
+              { name: 'Paintings', icon: PaintingsIcon, href: '/shop/paintings' },
+              { name: 'Portraits', icon: PortraitsIcon, href: '/shop/portraits' },
+              { name: 'Canvas', icon: CanvasIcon, href: '/shop/canvas' },
+              { name: 'Paints', icon: PaintsIcon, href: '/shop/paints' },
+              { name: 'Brushes', icon: BrushesIcon, href: '/shop/brushes' },
+              { name: 'Supplies', icon: SuppliesIcon, href: '/shop/supplies' },
             ].map((category, index) => (
               <Link
                 key={category.name}
