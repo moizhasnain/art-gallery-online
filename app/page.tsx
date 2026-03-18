@@ -53,7 +53,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[80vh] flex items-center overflow-hidden mb-12 lg:mb-0">
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white-light to-white"></div>
         <div className="absolute inset-0 opacity-10">
@@ -122,7 +122,7 @@ export default function Home() {
                   />
                 </div>
                 {/* Floating Badge */}
-                <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 flex items-center space-x-3">
+                <div className="absolute -bottom-4 md:-bottom-6 -left-0 md:-left-6 bg-white rounded-xl shadow-lg p-4 flex items-center space-x-3">
                   <div className="w-12 h-12 bg-grey rounded-full flex items-center justify-center">
                     <Star className="w-6 h-6 text-white" />
                   </div>
@@ -140,30 +140,30 @@ export default function Home() {
       {/* Features Banner */}
       <section className="bg-black py-8">
         <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="flex items-center space-x-3">
-              <Truck className="w-8 h-8 text-grey-light" />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+            <div className="flex items-center space-x-2 lg:space-x-3">
+              <Truck className="w-6 h-6 lg:w-8 lg:h-8 text-grey-light" />
               <div>
                 <p className="font-semibold text-white">Free Delivery</p>
                 <p className="text-sm text-white/70">On orders over ₨5,000</p>
               </div>
             </div>
-            <div className="flex items-center space-x-3">
-              <Shield className="w-8 h-8 text-grey-light" />
+            <div className="flex items-center space-x-2 lg:space-x-3">
+              <Shield className="w-6 h-6 lg:w-8 lg:h-8 text-grey-light" />
               <div>
                 <p className="font-semibold text-white">Secure Payment</p>
                 <p className="text-sm text-white/70">100% Secure</p>
               </div>
             </div>
-            <div className="flex items-center space-x-3">
-              <RefreshCcw className="w-8 h-8 text-grey-light" />
+            <div className="flex items-center space-x-2 lg:space-x-3">
+              <RefreshCcw className="w-6 h-6 lg:w-8 lg:h-8 text-grey-light" />
               <div>
                 <p className="font-semibold text-white">Easy Returns</p>
                 <p className="text-sm text-white/70">7-day return policy</p>
               </div>
             </div>
-            <div className="flex items-center space-x-3">
-              <Award className="w-8 h-8 text-grey-light" />
+            <div className="flex items-center space-x-2 lg:space-x-3">
+              <Award className="w-6 h-6 lg:w-8 lg:h-8 text-grey-light" />
               <div>
                 <p className="font-semibold text-white">Quality Art</p>
                 <p className="text-sm text-white/70">Handcrafted with love</p>
@@ -440,7 +440,7 @@ export default function Home() {
             <p className="text-grey-dark">Real feedback from real customers</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="flex flex-col md:flex-row gap-8 px-4 w-full">
             {[
               {
                 name: 'Ahmed Khan',
@@ -463,7 +463,7 @@ export default function Home() {
             ].map((testimonial, index) => (
               <div
                 key={testimonial.name}
-                className="bg-white-light rounded-xl p-6 shadow-md"
+                className="bg-white-light rounded-xl p-6 shadow-md w-full"
               >
                 <div className="flex space-x-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
