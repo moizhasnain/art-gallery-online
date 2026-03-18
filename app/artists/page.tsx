@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowLeft, Award, Palette, Mail, Instagram, Facebook } from 'lucide-react'
 
 export const metadata = {
@@ -102,9 +103,12 @@ export default function ArtistsPage() {
               >
                 {/* Image */}
                 <div className="aspect-square bg-grey-lighter relative">
-                  <div className="absolute inset-0 flex items-center justify-center text-grey">
-                    <Palette className="w-16 h-16" />
-                  </div>
+                  <Image
+                    src={artist.image}
+                    alt={artist.name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
 
                 {/* Content */}

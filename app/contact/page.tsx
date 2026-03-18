@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowLeft, Mail, Phone, MapPin, Clock, Send, Facebook, Instagram, Twitter } from 'lucide-react'
 
 export const metadata = {
@@ -11,19 +12,19 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+92 300 123 4567', '+92 42 123 45678'],
+      details: ['+92 320 4060398'],
       description: 'Mon-Sat, 9am-6pm PKT',
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@artgalleryonline.com', 'support@artgalleryonline.com'],
+      details: ['moizhasnain47@gmail.com'],
       description: 'We reply within 24 hours',
     },
     {
       icon: MapPin,
       title: 'Address',
-      details: ['123 Art Street, Gallery District', 'Lahore, Punjab 54000, Pakistan'],
+      details: ['Lahore, Pakistan'],
       description: 'Visit our gallery Mon-Sat',
     },
     {
@@ -184,10 +185,23 @@ export default function ContactPage() {
             {/* Map & Additional Info */}
             <div className="space-y-8">
               {/* Map Placeholder */}
-              <div className="bg-grey-lighter rounded-2xl h-80 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 text-grey mx-auto mb-2" />
-                  <p className="text-grey">Map View</p>
+              <div className="bg-grey-lighter rounded-2xl h-80 relative overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&h=400&fit=crop"
+                  alt="Gallery Location Map"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                  <div className="bg-white rounded-xl p-4 shadow-lg flex items-center gap-3">
+                    <div className="w-10 h-10 bg-[#800000] rounded-full flex items-center justify-center">
+                      <MapPin className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-black text-sm">Visit Our Gallery</p>
+                      <p className="text-grey text-xs">Lahore, Pakistan</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 

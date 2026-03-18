@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowLeft, Search, Filter, Star, ShoppingCart } from 'lucide-react'
 
 export const metadata = {
@@ -14,7 +15,7 @@ export default function ShopPage() {
       artist: 'Ahmed Khan',
       price: 250,
       originalPrice: 350,
-      image: '/api/placeholder/400/400',
+      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=400&fit=crop',
       rating: 4.8,
       reviews: 24,
       category: 'Landscape',
@@ -25,7 +26,7 @@ export default function ShopPage() {
       artist: 'Fatima Ahmed',
       price: 180,
       originalPrice: null,
-      image: '/api/placeholder/400/400',
+      image: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&h=400&fit=crop',
       rating: 4.9,
       reviews: 18,
       category: 'Abstract',
@@ -36,7 +37,7 @@ export default function ShopPage() {
       artist: 'Ali Rahman',
       price: 420,
       originalPrice: 500,
-      image: '/api/placeholder/400/400',
+      image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400&h=400&fit=crop',
       rating: 5.0,
       reviews: 12,
       category: 'Traditional',
@@ -47,7 +48,7 @@ export default function ShopPage() {
       artist: 'Sanaullah',
       price: 199,
       originalPrice: 280,
-      image: '/api/placeholder/400/400',
+      image: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=400&h=400&fit=crop',
       rating: 4.7,
       reviews: 31,
       category: 'Modern',
@@ -58,7 +59,7 @@ export default function ShopPage() {
       artist: 'Aisha Malik',
       price: 150,
       originalPrice: null,
-      image: '/api/placeholder/400/400',
+      image: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=400&h=400&fit=crop',
       rating: 4.8,
       reviews: 45,
       category: 'Floral',
@@ -69,7 +70,7 @@ export default function ShopPage() {
       artist: 'Ahmed Khan',
       price: 320,
       originalPrice: 400,
-      image: '/api/placeholder/400/400',
+      image: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=400&h=400&fit=crop',
       rating: 4.6,
       reviews: 19,
       category: 'Landscape',
@@ -143,9 +144,12 @@ export default function ShopPage() {
               >
                 {/* Image */}
                 <div className="aspect-square bg-grey-lighter relative">
-                  <div className="absolute inset-0 flex items-center justify-center text-grey">
-                    <span className="text-lg">Product Image</span>
-                  </div>
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover"
+                  />
                   {product.originalPrice && (
                     <div className="absolute top-4 left-4 bg-[#800000] text-white px-3 py-1 rounded-full text-sm font-medium">
                       Sale
@@ -188,11 +192,11 @@ export default function ShopPage() {
                   {/* Price */}
                   <div className="flex items-center gap-3">
                     <span className="text-2xl font-bold text-black">
-                      ${product.price}
+                      ₨{product.price * 280}
                     </span>
                     {product.originalPrice && (
                       <span className="text-lg text-grey line-through">
-                        ${product.originalPrice}
+                        ₨{product.originalPrice * 280}
                       </span>
                     )}
                   </div>

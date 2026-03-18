@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, Star, Paintbrush, Palette, Award, Truck, Shield, RefreshCcw } from 'lucide-react'
 
 // Custom SVG Icons for Categories
@@ -111,14 +112,14 @@ export default function Home() {
             {/* Hero Image */}
             <div className="relative animate-slideInRight">
               <div className="relative bg-white rounded-2xl shadow-2xl p-4">
-                <div className="aspect-[4/3] bg-gradient-to-br from-black/10 to-grey/20 rounded-xl overflow-hidden">
-                  {/* Placeholder for hero image */}
-                  <div className="w-full h-full flex items-center justify-center">
-                    <div className="text-center">
-                      <Paintbrush className="w-24 h-24 text-black mx-auto mb-4" />
-                      <p className="text-grey">Featured Artwork</p>
-                    </div>
-                  </div>
+                <div className="aspect-[4/3] bg-gradient-to-br from-black/10 to-grey/20 rounded-xl overflow-hidden relative">
+                  <Image
+                    src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800&h=600&fit=crop"
+                    alt="Featured Artwork - Beautiful abstract painting"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 {/* Floating Badge */}
                 <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 flex items-center space-x-3">
@@ -236,25 +237,25 @@ export default function Home() {
                 name: 'Sunset Landscape',
                 category: 'Paintings',
                 price: '₨8,500',
-                image: 'painting-1'
+                image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=400&fit=crop'
               },
               {
                 name: 'Portrait Sketch',
                 category: 'Portraits',
                 price: '₨5,000',
-                image: 'portrait-1'
+                image: 'https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=400&h=400&fit=crop'
               },
               {
                 name: 'Abstract Art',
                 category: 'Paintings',
                 price: '₨12,000',
-                image: 'abstract-1'
+                image: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&h=400&fit=crop'
               },
               {
                 name: 'Floral Canvas',
                 category: 'Canvas',
                 price: '₨6,500',
-                image: 'canvas-1'
+                image: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=400&h=400&fit=crop'
               },
             ].map((product, index) => (
               <div
@@ -263,9 +264,12 @@ export default function Home() {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="aspect-square bg-gradient-to-br from-black/10 to-grey/10 relative overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Paintbrush className="w-16 h-16 text-black/30" />
-                  </div>
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover"
+                  />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
                     <Link
                       href={`/product/${product.image}`}
@@ -335,11 +339,13 @@ export default function Home() {
             </div>
             <div className="relative">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-                <div className="aspect-[4/3] bg-gradient-to-br from-grey/30 to-grey-dark/30 rounded-xl flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <Paintbrush className="w-20 h-20 mx-auto mb-4 opacity-80" />
-                    <p className="text-lg font-medium">Custom Portrait Preview</p>
-                  </div>
+                <div className="aspect-[4/3] bg-gradient-to-br from-grey/30 to-grey-dark/30 rounded-xl flex items-center justify-center relative overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&h=600&fit=crop"
+                    alt="Custom Portrait Preview"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>

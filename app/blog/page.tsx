@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowLeft, Calendar, User, ArrowRight, Search } from 'lucide-react'
 
 export const metadata = {
@@ -14,7 +15,7 @@ export default function BlogPage() {
     author: 'Fatima Ahmed',
     date: 'March 15, 2024',
     category: 'Interior Design',
-    image: '/api/placeholder/800/400',
+    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=400&fit=crop',
     readTime: '5 min read',
   }
 
@@ -26,7 +27,7 @@ export default function BlogPage() {
       author: 'Ahmed Khan',
       date: 'March 10, 2024',
       category: 'Art Education',
-      image: '/api/placeholder/400/250',
+      image: 'https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=400&h=250&fit=crop',
       readTime: '7 min read',
     },
     {
@@ -36,7 +37,7 @@ export default function BlogPage() {
       author: 'Sanaullah',
       date: 'March 5, 2024',
       category: 'Artist Spotlight',
-      image: '/api/placeholder/400/250',
+      image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400&h=250&fit=crop',
       readTime: '10 min read',
     },
     {
@@ -46,7 +47,7 @@ export default function BlogPage() {
       author: 'Aisha Malik',
       date: 'February 28, 2024',
       category: 'Care Tips',
-      image: '/api/placeholder/400/250',
+      image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&h=250&fit=crop',
       readTime: '4 min read',
     },
     {
@@ -56,7 +57,7 @@ export default function BlogPage() {
       author: 'Hassan Raza',
       date: 'February 20, 2024',
       category: 'Services',
-      image: '/api/placeholder/400/250',
+      image: 'https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=400&h=250&fit=crop',
       readTime: '6 min read',
     },
     {
@@ -66,7 +67,7 @@ export default function BlogPage() {
       author: 'Fatima Ahmed',
       date: 'February 15, 2024',
       category: 'Interior Design',
-      image: '/api/placeholder/400/250',
+      image: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=400&h=250&fit=crop',
       readTime: '8 min read',
     },
   ]
@@ -139,8 +140,13 @@ export default function BlogPage() {
         <div className="container-custom">
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
             <div className="grid md:grid-cols-2">
-              <div className="aspect-video md:aspect-auto bg-grey-lighter flex items-center justify-center">
-                <span className="text-grey">Featured Image</span>
+              <div className="aspect-video md:aspect-auto bg-grey-lighter relative">
+                <Image
+                  src={featuredPost.image}
+                  alt={featuredPost.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-8 md:p-12 flex flex-col justify-center">
                 <span className="text-[#800000] text-sm font-medium mb-3">
@@ -186,8 +192,13 @@ export default function BlogPage() {
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
               >
                 {/* Image */}
-                <div className="aspect-video bg-grey-lighter flex items-center justify-center">
-                  <span className="text-grey">Blog Image</span>
+                <div className="aspect-video bg-grey-lighter relative">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
 
                 {/* Content */}

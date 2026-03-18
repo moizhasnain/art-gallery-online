@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowLeft, Palette, Truck, Shield, Award, Heart } from 'lucide-react'
 
 export const metadata = {
@@ -90,8 +91,13 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="aspect-square bg-grey-lighter rounded-2xl flex items-center justify-center">
-              <Palette className="w-24 h-24 text-grey" />
+            <div className="aspect-square bg-grey-lighter rounded-2xl relative overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600&h=600&fit=crop"
+                alt="Art Gallery Studio"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
