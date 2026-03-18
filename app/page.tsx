@@ -365,7 +365,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="flex flex-col md:flex-row gap-8 px-4 w-full">
             {[
               {
                 name: 'Budget-Friendly',
@@ -394,9 +394,7 @@ export default function Home() {
             ].map((tier, index) => (
               <div
                 key={tier.name}
-                className={`bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all ${
-                  index === 1 ? 'ring-2 ring-black transform md:-translate-y-2' : ''
-                }`}
+                className={`bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all w-full ${index === 1 ? 'ring-2 ring-black transform md:-translate-y-2' : ''}`}
               >
                 {index === 1 && (
                   <span className="bg-black text-white text-xs px-3 py-1 rounded-full">
