@@ -143,7 +143,7 @@ MIT License - feel free to use this project for learning or commercial purposes.
 
 ## Support
 
-For questions or support, please contact us at info@artgalleryonline.com
+For questions or support, please contact us at artgallerylahore@gmail.com
 
 ---
 
