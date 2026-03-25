@@ -121,11 +121,11 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center space-x-2 text-grey-light">
                 <MapPin className="w-5 h-5 text-grey-light" />
-                <span>Your City, Pakistan</span>
+                <span>Lahore, Pakistan</span>
               </li>
               <li className="flex items-center space-x-2 text-grey-light">
                 <Phone className="w-5 h-5 text-grey-light" />
-                <span>+92 300 1234567</span>
+                <span>+92 320 4060398</span>
               </li>
               <li className="flex items-center space-x-2 text-grey-light">
                 <Mail className="w-5 h-5 text-grey-light" />
