@@ -18,7 +18,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: 'Email',
-      details: ['moizhasnain47@gmail.com'],
+      details: ['artgallerylahore@gmail.com'],
       description: 'We reply within 24 hours',
     },
     {
