@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Black & Grey Color Scheme */
+  /* Light Mode Colors */
   --black: #000000;
   --black-dark: #000000;
   --black-light: #1A1A1A;
@@ -21,6 +21,45 @@
   --white-light: #FAFAFA;
   
   --accent: #333333;
+  
+  /* Light Mode Specific */
+  --bg-primary: var(--white-light);
+  --bg-secondary: var(--white);
+  --bg-tertiary: var(--grey-lightest);
+  --text-primary: var(--black);
+  --text-secondary: var(--grey);
+  --text-tertiary: var(--grey-light);
+  --border-color: var(--grey-lighter);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  /* Dark Mode Colors */
+  --black: #FFFFFF;
+  --black-dark: #FFFFFF;
+  --black-light: #E5E5E5;
+  
+  --grey: #9A9A9A;
+  --grey-dark: #B5B5B5;
+  --grey-light: #6B6B6B;
+  --grey-lighter: #3A3A3A;
+  --grey-lightest: #2A2A2A;
+  
+  --white: #000000;
+  --white-dark: #1A1A1A;
+  --white-light: #0D0D0D;
+  
+  --accent: #CCCCCC;
+  
+  /* Dark Mode Specific */
+  --bg-primary: #0D0D0D;
+  --bg-secondary: #1A1A1A;
+  --bg-tertiary: #2A2A2A;
+  --text-primary: #FFFFFF;
+  --text-secondary: #B5B5B5;
+  --text-tertiary: #6B6B6B;
+  --border-color: #3A3A3A;
+  --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -41,8 +80,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background-color: var(--white-light);
-  color: var(--black);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Custom Scrollbar */
@@ -51,7 +91,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--grey-lighter);
+  background: var(--bg-tertiary);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -60,7 +100,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--black);
+  background: var(--text-primary);
 }
 
 /* Animation Classes */
@@ -186,4 +226,42 @@ body {
 
 .price-original {
   @apply text-lg text-grey-light line-through;
+}
+
+/* Dark Mode Specific Styles */
+.dark .card {
+  @apply bg-grey-lightest;
+}
+
+.dark .input-field {
+  @apply bg-grey-lightest border-grey-lighter text-white;
+}
+
+.dark .input-field::placeholder {
+  @apply text-grey;
+}
+
+.dark .btn-primary {
+  @apply bg-white text-black;
+}
+
+.dark .btn-primary:hover {
+  @apply bg-grey-lighter;
+}
+
+.dark .btn-outline {
+  @apply border-white text-white;
+}
+
+.dark .btn-outline:hover {
+  @apply bg-white text-black;
+}
+
+.dark .gradient-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
 }

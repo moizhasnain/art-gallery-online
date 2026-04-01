@@ -44,21 +44,21 @@ export default function AboutPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white-light">
+    <div className="min-h-screen bg-white-light dark:bg-grey-lightest transition-colors duration-300">
       {/* Hero Section */}
-      <section className="bg-black py-16">
+      <section className="bg-black dark:bg-grey-lightest py-16 transition-colors duration-300">
         <div className="container-custom">
           <Link
             href="/"
-            className="inline-flex items-center text-white/80 hover:text-white mb-8"
+            className="inline-flex items-center text-white/80 dark:text-white/80 hover:text-white dark:hover:text-white mb-8"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white dark:text-white transition-colors duration-300">
             About Us
           </h1>
-          <p className="text-white/80 text-lg mt-4 max-w-2xl">
+          <p className="text-white/80 dark:text-white/80 text-lg mt-4 max-w-2xl">
             Bringing the beauty of art to homes around the world since 2016
           </p>
         </div>
@@ -69,10 +69,10 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-serif font-bold text-black mb-6">
+              <h2 className="text-3xl font-serif font-bold text-black dark:text-white mb-6 transition-colors duration-300">
                 Our Story
               </h2>
-              <div className="space-y-4 text-grey-dark">
+              <div className="space-y-4 text-grey-dark dark:text-grey-light transition-colors duration-300">
                 <p>
                   Art Gallery Online was founded with a simple mission: to make beautiful, 
                   handcrafted art accessible to everyone. What started as a small family 
@@ -91,7 +91,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="aspect-square bg-grey-lighter rounded-2xl relative overflow-hidden">
+            <div className="aspect-square bg-grey-lighter dark:bg-grey-dark rounded-2xl relative overflow-hidden transition-colors duration-300">
               <Image
                 src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600&h=600&fit=crop"
                 alt="Art Gallery Studio"
@@ -104,15 +104,15 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="bg-black py-16">
+      <section className="bg-black dark:bg-grey-lightest py-16 transition-colors duration-300">
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center text-white">
+              <div key={index} className="text-center text-white dark:text-white">
                 <div className="text-4xl md:text-5xl font-serif font-bold mb-2">
                   {stat.value}
                 </div>
-                <div className="text-white/70">{stat.label}</div>
+                <div className="text-white/70 dark:text-white/70">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -122,10 +122,10 @@ export default function AboutPage() {
       {/* Our Values */}
       <section className="section-padding">
         <div className="container-custom">
-          <h2 className="text-3xl font-serif font-bold text-black text-center mb-4">
+          <h2 className="text-3xl font-serif font-bold text-black dark:text-white text-center mb-4 transition-colors duration-300">
             Why Choose Us
           </h2>
-          <p className="text-grey-dark text-center max-w-2xl mx-auto mb-12">
+          <p className="text-grey-dark dark:text-grey-light text-center max-w-2xl mx-auto mb-12 transition-colors duration-300">
             We're committed to providing an exceptional art-buying experience from start to finish.
           </p>
           
@@ -133,15 +133,15 @@ export default function AboutPage() {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+                className="bg-white dark:bg-grey-lightest rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-14 h-14 bg-black/10 rounded-full flex items-center justify-center mb-6">
-                  <value.icon className="w-7 h-7 text-black" />
+                <div className="w-14 h-14 bg-black/10 dark:bg-white/10 rounded-full flex items-center justify-center mb-6">
+                  <value.icon className="w-7 h-7 text-black dark:text-white" />
                 </div>
-                <h3 className="text-xl font-serif font-bold text-black mb-3">
+                <h3 className="text-xl font-serif font-bold text-black dark:text-white mb-3 transition-colors duration-300">
                   {value.title}
                 </h3>
-                <p className="text-grey-dark">
+                <p className="text-grey-dark dark:text-grey-light transition-colors duration-300">
                   {value.description}
                 </p>
               </div>
@@ -151,13 +151,13 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Statement */}
-      <section className="bg-gradient-to-br from-black to-grey-dark py-20">
+      <section className="bg-gradient-to-br from-black to-grey-dark dark:from-grey-lightest dark:to-grey-dark py-20 transition-colors duration-300">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center text-white">
+          <div className="max-w-4xl mx-auto text-center text-white dark:text-white">
             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">
               Our Mission
             </h2>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
+            <p className="text-xl md:text-2xl text-white/90 dark:text-white/90 leading-relaxed">
               "To democratize art by connecting talented artists with art lovers worldwide, 
               making handcrafted beauty a part of every home."
             </p>
@@ -168,11 +168,11 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-serif font-bold text-black mb-4">
+          <div className="bg-white dark:bg-grey-lightest rounded-2xl shadow-lg p-8 md:p-12 text-center transition-colors duration-300">
+            <h2 className="text-3xl font-serif font-bold text-black dark:text-white mb-4 transition-colors duration-300">
               Ready to Explore?
             </h2>
-            <p className="text-grey-dark mb-8 max-w-2xl mx-auto">
+            <p className="text-grey-dark dark:text-grey-light mb-8 max-w-2xl mx-auto transition-colors duration-300">
               Browse our collection of unique artworks or get in touch with our team for custom orders.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -72,21 +72,21 @@ export default function ArtistsPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white-light">
+    <div className="min-h-screen bg-white-light dark:bg-grey-lightest transition-colors duration-300">
       {/* Hero Section */}
-      <section className="bg-black py-16">
+      <section className="bg-black dark:bg-grey-lightest py-16 transition-colors duration-300">
         <div className="container-custom">
           <Link
             href="/"
-            className="inline-flex items-center text-white/80 hover:text-white mb-8"
+            className="inline-flex items-center text-white/80 dark:text-white/80 hover:text-white dark:hover:text-white mb-8"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white dark:text-white transition-colors duration-300">
             Our Artists
           </h1>
-          <p className="text-white/80 text-lg mt-4 max-w-2xl">
+          <p className="text-white/80 dark:text-white/80 text-lg mt-4 max-w-2xl">
             Meet the talented artists behind our unique collection of handcrafted paintings
           </p>
         </div>
@@ -99,10 +99,10 @@ export default function ArtistsPage() {
             {artists.map((artist) => (
               <div
                 key={artist.id}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                className="bg-white dark:bg-grey-lightest rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
               >
                 {/* Image */}
-                <div className="aspect-square bg-grey-lighter relative">
+                <div className="aspect-square bg-grey-lighter dark:bg-grey-dark relative">
                   <Image
                     src={artist.image}
                     alt={artist.name}
@@ -114,30 +114,30 @@ export default function ArtistsPage() {
                 {/* Content */}
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xs bg-black text-white px-2 py-1 rounded">
+                    <span className="text-xs bg-black dark:bg-white text-white dark:text-black px-2 py-1 rounded">
                       {artist.style}
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-serif font-bold text-black mb-1">
+                  <h3 className="text-xl font-serif font-bold text-black dark:text-white mb-1 transition-colors duration-300">
                     {artist.name}
                   </h3>
-                  <p className="text-[#800000] font-medium mb-3">
+                  <p className="text-[#800000] dark:text-[#800000] font-medium mb-3">
                     {artist.specialty}
                   </p>
-                  <p className="text-grey-dark text-sm mb-4 line-clamp-3">
+                  <p className="text-grey-dark dark:text-grey-light text-sm mb-4 line-clamp-3 transition-colors duration-300">
                     {artist.bio}
                   </p>
 
                   {/* Stats */}
                   <div className="flex items-center gap-4 mb-4 text-sm">
                     <div className="flex items-center gap-1">
-                      <Palette className="w-4 h-4 text-grey" />
-                      <span className="text-grey-dark">{artist.artworks} artworks</span>
+                      <Palette className="w-4 h-4 text-grey dark:text-grey-light" />
+                      <span className="text-grey-dark dark:text-grey-light">{artist.artworks} artworks</span>
                     </div>
                     <div className="flex items-center gap-1">
-                      <Award className="w-4 h-4 text-grey" />
-                      <span className="text-grey-dark">{artist.awards} awards</span>
+                      <Award className="w-4 h-4 text-grey dark:text-grey-light" />
+                      <span className="text-grey-dark dark:text-grey-light">{artist.awards} awards</span>
                     </div>
                   </div>
 
@@ -146,8 +146,8 @@ export default function ArtistsPage() {
                     <button className="btn-primary flex-1 text-center">
                       View Profile
                     </button>
-                    <button className="p-2 border-2 border-black rounded-lg hover:bg-black hover:text-white transition-colors">
-                      <Mail className="w-5 h-5" />
+                    <button className="p-2 border-2 border-black dark:border-white rounded-lg hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-colors">
+                      <Mail className="w-5 h-5 text-black dark:text-white" />
                     </button>
                   </div>
                 </div>
@@ -158,18 +158,18 @@ export default function ArtistsPage() {
       </section>
 
       {/* Become an Artist CTA */}
-      <section className="bg-gradient-to-br from-black to-grey-dark py-16">
+      <section className="bg-gradient-to-br from-black to-grey-dark dark:from-grey-lightest dark:to-grey-dark py-16 transition-colors duration-300">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center text-white">
+          <div className="max-w-3xl mx-auto text-center text-white dark:text-white">
             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
               Are You an Artist?
             </h2>
-            <p className="text-white/80 text-lg mb-8">
+            <p className="text-white/80 dark:text-white/80 text-lg mb-8">
               Join our community of talented artists and showcase your artwork to thousands of customers worldwide.
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-white text-black px-8 py-3 rounded-lg font-medium hover:bg-grey-light transition-colors"
+              className="inline-block bg-white dark:bg-white text-black dark:text-black px-8 py-3 rounded-lg font-medium hover:bg-grey-light dark:hover:bg-grey-lighter transition-colors"
             >
               Apply as an Artist
             </Link>
