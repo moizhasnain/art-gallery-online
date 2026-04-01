@@ -55,24 +55,24 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden mb-12 lg:mb-0">
         {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white-light to-white dark:from-grey-lightest dark:via-grey-lightest dark:to-grey-lightest transition-colors duration-300"></div>
-        <div className="absolute inset-0 opacity-10 dark:opacity-20">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-black dark:bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-grey dark:bg-grey-dark rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white-light to-white"></div>
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-64 h-64 bg-black rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-grey rounded-full blur-3xl"></div>
         </div>
 
         <div className="container-custom relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div className="animate-fadeIn">
-              <span className="inline-block bg-black/10 dark:bg-white/10 text-black dark:text-white px-4 py-2 rounded-full text-sm font-medium mb-6 transition-colors duration-300">
+              <span className="inline-block bg-black/10 text-black px-4 py-2 rounded-full text-sm font-medium mb-6">
                 Custom Paintings & Artworks
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-black dark:text-white leading-tight mb-6 transition-colors duration-300">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-black leading-tight mb-6">
                 Beautiful Art for
-                <span className="text-black dark:text-white block">Every Space</span>
+                <span className="text-black block">Every Space</span>
               </h1>
-              <p className="text-lg text-grey-dark dark:text-grey-light mb-8 max-w-lg transition-colors duration-300">
+              <p className="text-lg text-grey-dark mb-8 max-w-lg">
                 Transform your home or office with unique handcrafted paintings. 
                 From custom portraits to stunning landscapes, we bring your vision to life.
               </p>
@@ -93,26 +93,26 @@ export default function Home() {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-grey-lighter dark:border-grey-dark transition-colors duration-300">
+              <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-grey-lighter">
                 <div>
-                  <p className="text-3xl font-bold text-black dark:text-white transition-colors duration-300">500+</p>
-                  <p className="text-sm text-grey dark:text-grey-light transition-colors duration-300">Happy Customers</p>
+                  <p className="text-3xl font-bold text-black">500+</p>
+                  <p className="text-sm text-grey">Happy Customers</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-black dark:text-white transition-colors duration-300">100+</p>
-                  <p className="text-sm text-grey dark:text-grey-light transition-colors duration-300">Artworks</p>
+                  <p className="text-3xl font-bold text-black">100+</p>
+                  <p className="text-sm text-grey">Artworks</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-black dark:text-white transition-colors duration-300">50+</p>
-                  <p className="text-sm text-grey dark:text-grey-light transition-colors duration-300">Artists</p>
+                  <p className="text-3xl font-bold text-black">50+</p>
+                  <p className="text-sm text-grey">Artists</p>
                 </div>
               </div>
             </div>
 
             {/* Hero Image */}
             <div className="relative animate-slideInRight">
-              <div className="relative bg-white dark:bg-grey-lightest rounded-2xl shadow-2xl p-4 transition-colors duration-300">
-                <div className="aspect-[4/3] bg-gradient-to-br from-black/10 to-grey/20 dark:from-white/10 dark:to-grey-dark/20 rounded-xl overflow-hidden relative">
+              <div className="relative bg-white rounded-2xl shadow-2xl p-4">
+                <div className="aspect-[4/3] bg-gradient-to-br from-black/10 to-grey/20 rounded-xl overflow-hidden relative">
                   <Image
                     src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800&h=600&fit=crop"
                     alt="Featured Artwork - Beautiful abstract painting"
@@ -122,13 +122,13 @@ export default function Home() {
                   />
                 </div>
                 {/* Floating Badge */}
-                <div className="absolute -bottom-4 md:-bottom-6 -left-0 md:-left-6 bg-white dark:bg-grey-lightest rounded-xl shadow-lg p-4 flex items-center space-x-3 transition-colors duration-300">
-                  <div className="w-12 h-12 bg-grey dark:bg-grey-dark rounded-full flex items-center justify-center">
-                    <Star className="w-6 h-6 text-white dark:text-white" />
+                <div className="absolute -bottom-4 md:-bottom-6 -left-0 md:-left-6 bg-white rounded-xl shadow-lg p-4 flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-grey rounded-full flex items-center justify-center">
+                    <Star className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="font-bold text-black dark:text-white transition-colors duration-300">4.9/5</p>
-                    <p className="text-sm text-grey dark:text-grey-light transition-colors duration-300">Customer Rating</p>
+                    <p className="font-bold text-black">4.9/5</p>
+                    <p className="text-sm text-grey">Customer Rating</p>
                   </div>
                 </div>
               </div>
@@ -138,35 +138,35 @@ export default function Home() {
       </section>
 
       {/* Features Banner */}
-      <section className="bg-black dark:bg-grey-lightest py-8 transition-colors duration-300">
+      <section className="bg-black py-8">
         <div className="container-custom">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
             <div className="flex items-center space-x-2 lg:space-x-3">
-              <Truck className="w-6 h-6 lg:w-8 lg:h-8 text-grey-light dark:text-grey-light" />
+              <Truck className="w-6 h-6 lg:w-8 lg:h-8 text-grey-light" />
               <div>
-                <p className="font-semibold text-white dark:text-white">Free Delivery</p>
-                <p className="text-sm text-white/70 dark:text-white/70">On orders over ₨5,000</p>
+                <p className="font-semibold text-white">Free Delivery</p>
+                <p className="text-sm text-white/70">On orders over ₨5,000</p>
               </div>
             </div>
             <div className="flex items-center space-x-2 lg:space-x-3">
-              <Shield className="w-6 h-6 lg:w-8 lg:h-8 text-grey-light dark:text-grey-light" />
+              <Shield className="w-6 h-6 lg:w-8 lg:h-8 text-grey-light" />
               <div>
-                <p className="font-semibold text-white dark:text-white">Secure Payment</p>
-                <p className="text-sm text-white/70 dark:text-white/70">100% Secure</p>
+                <p className="font-semibold text-white">Secure Payment</p>
+                <p className="text-sm text-white/70">100% Secure</p>
               </div>
             </div>
             <div className="flex items-center space-x-2 lg:space-x-3">
-              <RefreshCcw className="w-6 h-6 lg:w-8 lg:h-8 text-grey-light dark:text-grey-light" />
+              <RefreshCcw className="w-6 h-6 lg:w-8 lg:h-8 text-grey-light" />
               <div>
-                <p className="font-semibold text-white dark:text-white">Easy Returns</p>
-                <p className="text-sm text-white/70 dark:text-white/70">7-day return policy</p>
+                <p className="font-semibold text-white">Easy Returns</p>
+                <p className="text-sm text-white/70">7-day return policy</p>
               </div>
             </div>
             <div className="flex items-center space-x-2 lg:space-x-3">
-              <Award className="w-6 h-6 lg:w-8 lg:h-8 text-grey-light dark:text-grey-light" />
+              <Award className="w-6 h-6 lg:w-8 lg:h-8 text-grey-light" />
               <div>
-                <p className="font-semibold text-white dark:text-white">Quality Art</p>
-                <p className="text-sm text-white/70 dark:text-white/70">Handcrafted with love</p>
+                <p className="font-semibold text-white">Quality Art</p>
+                <p className="text-sm text-white/70">Handcrafted with love</p>
               </div>
             </div>
           </div>
@@ -174,13 +174,13 @@ export default function Home() {
       </section>
 
       {/* Categories Section */}
-      <section className="section-padding bg-white-light dark:bg-grey-lightest transition-colors duration-300">
+      <section className="section-padding bg-white-light">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-black dark:text-white mb-4 transition-colors duration-300">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-black mb-4">
               Shop by Category
             </h2>
-            <p className="text-grey-dark dark:text-grey-light max-w-2xl mx-auto transition-colors duration-300">
+            <p className="text-grey-dark max-w-2xl mx-auto">
               Explore our wide range of art products and services
             </p>
           </div>
@@ -197,13 +197,13 @@ export default function Home() {
               <Link
                 key={category.name}
                 href={category.href}
-                className="group bg-white dark:bg-grey-lightest rounded-xl p-6 text-center shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fadeIn"
+                className="group bg-white rounded-xl p-6 text-center shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fadeIn"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-16 h-16 bg-black/10 dark:bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-black dark:group-hover:bg-white transition-colors">
-                  <category.icon className="w-8 h-8 text-black dark:text-white group-hover:text-white dark:group-hover:text-black transition-colors" />
+                <div className="w-16 h-16 bg-black/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-black transition-colors">
+                  <category.icon className="w-8 h-8 text-black group-hover:text-white transition-colors" />
                 </div>
-                <h3 className="font-semibold text-black dark:text-white group-hover:text-black dark:group-hover:text-white transition-colors">
+                <h3 className="font-semibold text-black group-hover:text-black transition-colors">
                   {category.name}
                 </h3>
               </Link>
@@ -213,18 +213,18 @@ export default function Home() {
       </section>
 
       {/* Featured Products */}
-      <section className="section-padding bg-white dark:bg-grey-lightest transition-colors duration-300">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="flex justify-between items-end mb-12">
             <div>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-black dark:text-white mb-4 transition-colors duration-300">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-black mb-4">
                 Featured Artworks
               </h2>
-              <p className="text-grey-dark dark:text-grey-light transition-colors duration-300">Handpicked pieces for your space</p>
+              <p className="text-grey-dark">Handpicked pieces for your space</p>
             </div>
             <Link
               href="/shop"
-              className="hidden md:inline-flex items-center space-x-2 text-black dark:text-white hover:text-grey-dark dark:hover:text-grey-light font-medium transition-colors"
+              className="hidden md:inline-flex items-center space-x-2 text-black hover:text-grey-dark font-medium"
             >
               <span>View All</span>
               <ArrowRight className="w-5 h-5" />
@@ -263,28 +263,28 @@ export default function Home() {
                 className="card group animate-fadeIn"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="aspect-square bg-gradient-to-br from-black/10 to-grey/10 dark:from-white/10 dark:to-grey-dark/10 relative overflow-hidden">
+                <div className="aspect-square bg-gradient-to-br from-black/10 to-grey/10 relative overflow-hidden">
                   <Image
                     src={product.image}
                     alt={product.name}
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 dark:group-hover:bg-white/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
                     <Link
                       href={`/product/${product.image}`}
-                      className="bg-white dark:bg-black text-black dark:text-white px-4 py-2 rounded-lg font-medium transform translate-y-4 group-hover:translate-y-0 transition-all"
+                      className="bg-white text-black px-4 py-2 rounded-lg font-medium transform translate-y-4 group-hover:translate-y-0 transition-all"
                     >
                       View Details
                     </Link>
                   </div>
                 </div>
                 <div className="p-4">
-                  <p className="text-sm text-grey dark:text-grey-light mb-1 transition-colors duration-300">{product.category}</p>
-                  <h3 className="font-semibold text-black dark:text-white mb-2 group-hover:text-black dark:group-hover:text-white transition-colors">
+                  <p className="text-sm text-grey mb-1">{product.category}</p>
+                  <h3 className="font-semibold text-black mb-2 group-hover:text-black transition-colors">
                     {product.name}
                   </h3>
-                  <p className="text-lg font-bold text-black dark:text-white transition-colors duration-300">{product.price}</p>
+                  <p className="text-lg font-bold text-black">{product.price}</p>
                 </div>
               </div>
             ))}
@@ -300,32 +300,32 @@ export default function Home() {
       </section>
 
       {/* Custom Order Section */}
-      <section className="section-padding bg-black dark:bg-grey-lightest relative overflow-hidden transition-colors duration-300">
-        <div className="absolute inset-0 opacity-20 dark:opacity-30">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-grey-dark dark:bg-grey rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-grey dark:bg-grey-dark rounded-full blur-3xl"></div>
+      <section className="section-padding bg-black relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-grey-dark rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-grey rounded-full blur-3xl"></div>
         </div>
         <div className="container-custom relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-white dark:text-white mb-6 transition-colors duration-300">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6">
                 Get Your Custom Portrait
               </h2>
-              <p className="text-grey-light dark:text-grey-light mb-8 text-lg transition-colors duration-300">
+              <p className="text-grey-light mb-8 text-lg">
                 Turn your favorite photo into a beautiful hand-drawn portrait. 
                 Perfect for gifts, home decor, or commemorating special moments.
               </p>
               <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
-                <div className="flex items-center space-x-2 text-white dark:text-white">
-                  <div className="w-2 h-2 bg-grey dark:bg-grey-dark rounded-full"></div>
+                <div className="flex items-center space-x-2 text-white">
+                  <div className="w-2 h-2 bg-grey rounded-full"></div>
                   <span>Upload your photo</span>
                 </div>
-                <div className="flex items-center space-x-2 text-white dark:text-white">
-                  <div className="w-2 h-2 bg-grey dark:bg-grey-dark rounded-full"></div>
+                <div className="flex items-center space-x-2 text-white">
+                  <div className="w-2 h-2 bg-grey rounded-full"></div>
                   <span>Choose style & size</span>
                 </div>
-                <div className="flex items-center space-x-2 text-white dark:text-white">
-                  <div className="w-2 h-2 bg-grey dark:bg-grey-dark rounded-full"></div>
+                <div className="flex items-center space-x-2 text-white">
+                  <div className="w-2 h-2 bg-grey rounded-full"></div>
                   <span>Receive your artwork</span>
                 </div>
               </div>
@@ -338,8 +338,8 @@ export default function Home() {
               </Link>
             </div>
             <div className="relative">
-              <div className="bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                <div className="aspect-[4/3] bg-gradient-to-br from-grey/30 to-grey-dark/30 dark:from-grey-dark/30 dark:to-grey/30 rounded-xl flex items-center justify-center relative overflow-hidden">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                <div className="aspect-[4/3] bg-gradient-to-br from-grey/30 to-grey-dark/30 rounded-xl flex items-center justify-center relative overflow-hidden">
                   <Image
                     src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&h=600&fit=crop"
                     alt="Custom Portrait Preview"
@@ -354,13 +354,13 @@ export default function Home() {
       </section>
 
       {/* Pricing Tiers */}
-      <section className="section-padding bg-white-light dark:bg-grey-lightest transition-colors duration-300">
+      <section className="section-padding bg-white-light">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-black dark:text-white mb-4 transition-colors duration-300">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-black mb-4">
               Transparent Pricing
             </h2>
-            <p className="text-grey-dark dark:text-grey-light max-w-2xl mx-auto transition-colors duration-300">
+            <p className="text-grey-dark max-w-2xl mx-auto">
               Choose the perfect artwork for your budget
             </p>
           </div>
@@ -394,22 +394,22 @@ export default function Home() {
             ].map((tier, index) => (
               <div
                 key={tier.name}
-                className={`bg-white dark:bg-grey-lightest rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all w-full ${index === 1 ? 'ring-2 ring-black dark:ring-white transform md:-translate-y-2' : ''}`}
+                className={`bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all w-full ${index === 1 ? 'ring-2 ring-black transform md:-translate-y-2' : ''}`}
               >
                 {index === 1 && (
-                  <span className="bg-black dark:bg-white text-white dark:text-black text-xs px-3 py-1 rounded-full">
+                  <span className="bg-black text-white text-xs px-3 py-1 rounded-full">
                     Most Popular
                   </span>
                 )}
-                <h3 className="text-xl font-serif font-bold text-black dark:text-white mt-3 transition-colors duration-300">
+                <h3 className="text-xl font-serif font-bold text-black mt-3">
                   {tier.name}
                 </h3>
-                <p className="text-2xl font-bold text-black dark:text-white mt-2 transition-colors duration-300">{tier.price}</p>
-                <p className="text-grey dark:text-grey-light text-sm mt-2 transition-colors duration-300">{tier.description}</p>
+                <p className="text-2xl font-bold text-black mt-2">{tier.price}</p>
+                <p className="text-grey text-sm mt-2">{tier.description}</p>
                 <ul className="mt-6 space-y-2">
                   {tier.features.map((feature) => (
-                    <li key={feature} className="flex items-center space-x-2 text-sm text-grey-dark dark:text-grey-light transition-colors duration-300">
-                      <div className="w-1.5 h-1.5 bg-grey dark:bg-grey-dark rounded-full"></div>
+                    <li key={feature} className="flex items-center space-x-2 text-sm text-grey-dark">
+                      <div className="w-1.5 h-1.5 bg-grey rounded-full"></div>
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -418,8 +418,8 @@ export default function Home() {
                   href="/contact"
                   className={`mt-6 block w-full py-3 rounded-lg text-center font-medium transition-colors ${
                     index === 1
-                      ? 'bg-black dark:bg-white text-white dark:text-black hover:bg-grey-dark dark:hover:bg-grey-lighter'
-                      : 'bg-white-light dark:bg-grey-lightest text-black dark:text-white hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black'
+                      ? 'bg-black text-white hover:bg-grey-dark'
+                      : 'bg-white-light text-black hover:bg-black hover:text-white'
                   }`}
                 >
                   Get Quote
@@ -431,13 +431,13 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="section-padding bg-white dark:bg-grey-lightest transition-colors duration-300">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-black dark:text-white mb-4 transition-colors duration-300">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-black mb-4">
               What Our Customers Say
             </h2>
-            <p className="text-grey-dark dark:text-grey-light transition-colors duration-300">Real feedback from real customers</p>
+            <p className="text-grey-dark">Real feedback from real customers</p>
           </div>
 
           <div className="flex flex-col md:flex-row gap-8 px-4 w-full">
@@ -463,23 +463,23 @@ export default function Home() {
             ].map((testimonial, index) => (
               <div
                 key={testimonial.name}
-                className="bg-white-light dark:bg-grey-lightest rounded-xl p-6 shadow-md w-full transition-colors duration-300"
+                className="bg-white-light rounded-xl p-6 shadow-md w-full"
               >
                 <div className="flex space-x-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-black dark:text-white fill-black dark:fill-white" />
+                    <Star key={i} className="w-5 h-5 text-black fill-black" />
                   ))}
                 </div>
-                <p className="text-grey-dark dark:text-grey-light mb-4 transition-colors duration-300">"{testimonial.text}"</p>
+                <p className="text-grey-dark mb-4">"{testimonial.text}"</p>
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-black dark:bg-white rounded-full flex items-center justify-center">
-                    <span className="text-white dark:text-black font-medium">
+                  <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center">
+                    <span className="text-white font-medium">
                       {testimonial.name.charAt(0)}
                     </span>
                   </div>
                   <div>
-                    <p className="font-semibold text-black dark:text-white transition-colors duration-300">{testimonial.name}</p>
-                    <p className="text-sm text-grey dark:text-grey-light transition-colors duration-300">{testimonial.location}</p>
+                    <p className="font-semibold text-black">{testimonial.name}</p>
+                    <p className="text-sm text-grey">{testimonial.location}</p>
                   </div>
                 </div>
               </div>
@@ -489,28 +489,27 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-black dark:bg-grey-lightest transition-colors duration-300">
+      <section className="section-padding bg-black">
         <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-white dark:text-white mb-6 transition-colors duration-300">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6">
             Ready to Transform Your Space?
           </h2>
-          <p className="text-grey-light dark:text-grey-light text-lg max-w-2xl mx-auto mb-8 transition-colors duration-300">
+          <p className="text-grey-light text-lg max-w-2xl mx-auto mb-8">
             Browse our collection or get in touch for custom artwork. 
             We're here to bring your artistic vision to life.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/shop"
-              className="btn-primary inline-flex items-center space-x-2"
+              className="bg-white text-black px-8 py-3 rounded-lg font-medium hover:bg-grey-light transition-colors"
             >
-              <span>Browse Collection</span>
-              <ArrowRight className="w-5 h-5" />
+              Shop Now
             </Link>
             <Link
               href="/contact"
-              className="btn-outline inline-flex items-center space-x-2"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-black transition-colors"
             >
-              <span>Contact Us</span>
+              Contact Us
             </Link>
           </div>
         </div>

@@ -80,28 +80,28 @@ export default function ShopPage() {
   const categories = ['All', 'Landscape', 'Abstract', 'Traditional', 'Modern', 'Floral', 'Portrait']
 
   return (
-    <div className="min-h-screen bg-white-light dark:bg-grey-lightest transition-colors duration-300">
+    <div className="min-h-screen bg-white-light">
       {/* Hero Section */}
-      <section className="bg-black dark:bg-grey-lightest py-16 transition-colors duration-300">
+      <section className="bg-black py-16">
         <div className="container-custom">
           <Link
             href="/"
-            className="inline-flex items-center text-white/80 dark:text-white/80 hover:text-white dark:hover:text-white mb-8"
+            className="inline-flex items-center text-white/80 hover:text-white mb-8"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white dark:text-white transition-colors duration-300">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white">
             Our Collection
           </h1>
-          <p className="text-white/80 dark:text-white/80 text-lg mt-4 max-w-2xl">
+          <p className="text-white/80 text-lg mt-4 max-w-2xl">
             Discover unique handcrafted paintings from talented artists worldwide
           </p>
         </div>
       </section>
 
       {/* Search and Filter */}
-      <section className="bg-white dark:bg-grey-lightest shadow-sm sticky top-20 z-40 transition-colors duration-300">
+      <section className="bg-white shadow-sm sticky top-20 z-40">
         <div className="container-custom py-4">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             {/* Categories */}
@@ -111,8 +111,8 @@ export default function ShopPage() {
                   key={category}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                     category === 'All'
-                      ? 'bg-black dark:bg-white text-white dark:text-black'
-                      : 'bg-grey-lighter dark:bg-grey-dark text-black dark:text-white hover:bg-grey dark:hover:bg-grey-light'
+                      ? 'bg-black text-white'
+                      : 'bg-grey-lighter text-black hover:bg-grey'
                   }`}
                 >
                   {category}
@@ -125,9 +125,9 @@ export default function ShopPage() {
               <input
                 type="text"
                 placeholder="Search artworks..."
-                className="w-full px-4 py-2 pl-10 border border-grey-lighter dark:border-grey-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white bg-white dark:bg-grey-lightest text-black dark:text-white transition-colors duration-300"
+                className="w-full px-4 py-2 pl-10 border border-grey-lighter rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
               />
-              <Search className="w-5 h-5 text-grey dark:text-grey-light absolute left-3 top-1/2 -translate-y-1/2" />
+              <Search className="w-5 h-5 text-grey absolute left-3 top-1/2 -translate-y-1/2" />
             </div>
           </div>
         </div>
@@ -140,10 +140,10 @@ export default function ShopPage() {
             {products.map((product) => (
               <div
                 key={product.id}
-                className="bg-white dark:bg-grey-lightest rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
               >
                 {/* Image */}
-                <div className="aspect-square bg-grey-lighter dark:bg-grey-dark relative">
+                <div className="aspect-square bg-grey-lighter relative">
                   <Image
                     src={product.image}
                     alt={product.name}
@@ -155,20 +155,20 @@ export default function ShopPage() {
                       Sale
                     </div>
                   )}
-                  <button className="absolute bottom-4 right-4 bg-white dark:bg-grey-lightest p-2 rounded-full shadow-lg hover:bg-grey-lighter dark:hover:bg-grey-dark transition-colors">
-                    <ShoppingCart className="w-5 h-5 text-black dark:text-white" />
+                  <button className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-lg hover:bg-grey-lighter transition-colors">
+                    <ShoppingCart className="w-5 h-5 text-black" />
                   </button>
                 </div>
 
                 {/* Content */}
                 <div className="p-6">
-                  <div className="text-xs text-grey dark:text-grey-light uppercase tracking-wide mb-2 transition-colors duration-300">
+                  <div className="text-xs text-grey uppercase tracking-wide mb-2">
                     {product.category}
                   </div>
-                  <h3 className="text-lg font-serif font-bold text-black dark:text-white mb-1 transition-colors duration-300">
+                  <h3 className="text-lg font-serif font-bold text-black mb-1">
                     {product.name}
                   </h3>
-                  <p className="text-sm text-grey-dark dark:text-grey-light mb-3 transition-colors duration-300">by {product.artist}</p>
+                  <p className="text-sm text-grey-dark mb-3">by {product.artist}</p>
 
                   {/* Rating */}
                   <div className="flex items-center gap-2 mb-4">
@@ -179,23 +179,23 @@ export default function ShopPage() {
                           className={`w-4 h-4 ${
                             i < Math.floor(product.rating)
                               ? 'text-yellow-500 fill-current'
-                              : 'text-grey dark:text-grey-light'
+                              : 'text-grey'
                           }`}
                         />
                       ))}
                     </div>
-                    <span className="text-sm text-grey dark:text-grey-light transition-colors duration-300">
+                    <span className="text-sm text-grey">
                       {product.rating} ({product.reviews} reviews)
                     </span>
                   </div>
 
                   {/* Price */}
                   <div className="flex items-center gap-3">
-                    <span className="text-2xl font-bold text-black dark:text-white transition-colors duration-300">
+                    <span className="text-2xl font-bold text-black">
                       ₨{product.price * 280}
                     </span>
                     {product.originalPrice && (
-                      <span className="text-lg text-grey dark:text-grey-light line-through transition-colors duration-300">
+                      <span className="text-lg text-grey line-through">
                         ₨{product.originalPrice * 280}
                       </span>
                     )}
