@@ -86,7 +86,7 @@ export default function CartPage() {
                       {/* Price */}
                       <div className="md:col-span-2 text-center md:block flex justify-between py-2">
                         <span className="md:hidden font-medium">Price:</span>
-                        <span className="font-medium text-black">${item.price}</span>
+                        <span className="font-medium text-black">₨{item.price * 280}</span>
                       </div>
 
                       {/* Quantity */}
@@ -103,7 +103,7 @@ export default function CartPage() {
                       {/* Total */}
                       <div className="md:col-span-2 text-right md:block flex justify-between py-2">
                         <span className="md:hidden font-medium">Total:</span>
-                        <span className="font-bold text-black">${item.price * item.quantity}</span>
+                        <span className="font-bold text-black">₨{item.price * item.quantity * 280}</span>
                       </div>
                     </div>
                   ))}
@@ -131,17 +131,17 @@ export default function CartPage() {
                   <div className="space-y-4 mb-6">
                     <div className="flex justify-between">
                       <span className="text-grey-dark">Subtotal</span>
-                      <span className="font-medium text-black">${subtotal}</span>
+                      <span className="font-medium text-black">₨{subtotal * 280}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-grey-dark">Shipping</span>
                       <span className="font-medium text-green-600">
-                        {shipping === 0 ? 'Free' : `$${shipping}`}
+                        {shipping === 0 ? 'Free' : `₨${shipping * 280}`}
                       </span>
                     </div>
                     <div className="border-t border-grey-lighter pt-4 flex justify-between">
                       <span className="font-bold text-black">Total</span>
-                      <span className="font-bold text-xl text-black">${total}</span>
+                      <span className="font-bold text-xl text-black">₨{total * 280}</span>
                     </div>
                   </div>
 

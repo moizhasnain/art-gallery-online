@@ -140,7 +140,7 @@ export default function AccountPage() {
                   <div className="text-sm text-grey">Wishlist Items</div>
                 </div>
                 <div className="bg-white rounded-2xl shadow-lg p-6 text-center">
-                  <div className="text-3xl font-bold text-black mb-1">$670</div>
+                  <div className="text-3xl font-bold text-black mb-1">₨187,600</div>
                   <div className="text-sm text-grey">Total Spent</div>
                 </div>
               </div>
@@ -173,7 +173,7 @@ export default function AccountPage() {
                           </div>
                         </div>
                         <div className="text-right">
-                          <div className="font-bold text-black">${order.total}</div>
+                          <div className="font-bold text-black">₨{order.total * 280}</div>
                           <div className="flex items-center gap-2 text-sm">
                             <span className="text-green-600 flex items-center gap-1">
                               <Clock className="w-3 h-3" />
