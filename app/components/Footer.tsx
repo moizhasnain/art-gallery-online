@@ -129,7 +129,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-2 text-grey-light">
                 <Mail className="w-5 h-5 text-grey-light" />
-                <span>info@artgalleryonline.com</span>
+                <span>artgallerylahore@gmail.com</span>
               </li>
             </ul>
           </div>

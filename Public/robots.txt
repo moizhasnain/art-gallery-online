@@ -1,0 +1,21 @@
+# robots.txt for Art Gallery Online
+# https://www.artgalleryonline.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.artgalleryonline.com/sitemap.xml
+
+# Disallow admin and private pages
+Disallow: /account/
+Disallow: /cart/
+Disallow: /api/
+
+# Allow all other pages
+Allow: /shop
+Allow: /about
+Allow: /artists
+Allow: /blog
+Allow: /contact
+Allow: /return-policy

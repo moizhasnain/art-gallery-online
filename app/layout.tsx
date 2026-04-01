@@ -4,13 +4,31 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Art Gallery Online | Custom Paintings & Artworks',
-  description: 'Art Gallery Online - Your destination for custom paintings, artworks, portrait sketches, and art supplies. Shop unique pieces for your home, office, or as personalized gifts.',
-  keywords: 'art gallery, paintings, custom art, portrait sketches, wall art, home decor, office art, handmade paintings',
+  title: 'Art Gallery Online | Buy Custom Paintings, Portraits & Art Supplies',
+  description: 'Discover unique handcrafted paintings, custom portraits, and premium art supplies. Shop stunning wall art for home & office decor. Order your personalized artwork today!',
+  keywords: 'art gallery, custom paintings, portrait sketches, wall art, home decor, office art, handmade paintings, art supplies, personalized gifts, canvas art, oil paintings, acrylic paintings',
   openGraph: {
-    title: 'Art Gallery Online | Custom Paintings & Artworks',
-    description: 'Your destination for custom paintings, artworks, portrait sketches, and art supplies.',
+    title: 'Art Gallery Online | Buy Custom Paintings, Portraits & Art Supplies',
+    description: 'Discover unique handcrafted paintings, custom portraits, and premium art supplies. Shop stunning wall art for home & office decor.',
     type: 'website',
+    locale: 'en_US',
+    siteName: 'Art Gallery Online',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Art Gallery Online | Buy Custom Paintings, Portraits & Art Supplies',
+    description: 'Discover unique handcrafted paintings, custom portraits, and premium art supplies. Shop stunning wall art for home & office decor.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 
