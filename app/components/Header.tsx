@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ShoppingCart, User, Search, Menu, X } from 'lucide-react'
 
@@ -23,9 +24,13 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center">
-              <span className="text-white font-serif text-xl font-bold">A</span>
-            </div>
+            <Image
+              src="/logo.png"
+              alt="Art Gallery Online"
+              width={40}
+              height={40}
+              className="rounded-full"
+            />
             <div>
               <h1 className="text-xl font-serif font-bold text-black">
                 Art Gallery
