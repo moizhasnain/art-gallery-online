@@ -22,22 +22,23 @@ export default function Header() {
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <Image
-              src="/logo.png"
-              alt="Art Gallery Online"
-              width={40}
-              height={40}
-              className="rounded-full"
-            />
-            <div>
-              <h1 className="text-xl font-serif font-bold text-black">
-                Art Gallery
-              </h1>
-              <p className="text-xs text-grey">Online</p>
-            </div>
-          </Link>
+           {/* Logo */}
+           <Link href="/" className="flex items-center space-x-3">
+             <Image
+               src="/images/Art.png"
+               alt="Art Gallery Logo"
+               width={50}
+               height={50}
+               priority
+               className="flex-shrink-0"
+             />
+             <div>
+               <h1 className="text-xl font-serif font-bold text-black">
+                 Art Gallery
+               </h1>
+               <p className="text-xs text-grey">Online</p>
+             </div>
+           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
